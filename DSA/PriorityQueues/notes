@@ -1,0 +1,16 @@
+Priority Queues are the queues where the elements have a priority property. So first in first now is not followed, instead the decision of out is made using the priority associated with the elements.
+It can be implemented in two ways:
+    Min priority queue: Where the elements come out with the ascending order of their priority
+    Max priority queue: Where the elements come out with the descending order fo their priority
+Priority queues can be best implemented using heap data structure. The time complexity will remain O(log(n)) as it is in BST but the implementation part is easier using Heaps.
+
+
+Insert: We will first take the element and insert it at the last of the ArrayList and then perform the Up-Heapify (in Min-PQ) operation to place it in its right position. In Max-PQ, we will perform Down-Heapify.
+
+Heap Sort:
+First we will build heap of the given array and then remove the minimum element, hence we will have a sorted array.
+
+Building Heap: There are various method to build heap of that array but we are concerned about the space complexity.
+    i)Using an array and two heaps in the sort. This is the basic one but we will have to use two heaps and the space complexity is not desirable.
+    ii) Using the array itself as a heap. In this way, we can reduce the space complexity. What we do is tha during heap building, we divide the array in two parts: the heap and original array. We start with the first element and assume it is in the heap. Then we add the rest of the elements one by one in the heap by maintain the heap property.
+    iii) This method is very similar to the 2nd method but here, we do not work on the leaf nodes. If there are n nodes in a heap, then the no of non-leaf nodes is n/2. We work on these nodes and down heapify the elements form n/2-1 to 0. In this way, we get our heap. We will do the removal using the same array. We will swap the min with last and so on. This is the best approach.

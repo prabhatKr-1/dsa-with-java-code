@@ -1,0 +1,15 @@
+Queue: Abstract data type
+First In First Out
+We keep two references, one of the front and the other of the rear. Elements are added in the real and removed from the front.
+Functions:
+    isEmpty()
+    size()
+    enqueue: for insertion in queue
+    dequeue: removes element from the front
+    front(): to see the first element
+Complexities of all these functions is O(1)
+
+
+In Java Collection Framework, unlike Linked list and stack, queue is an interface. You can not create objects of an interface.\
+So either one can implement the methods in a class or use the methods if it is implemented in a class.
+Luckily for us, it is implemented in collection's Linked list

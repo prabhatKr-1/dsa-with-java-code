@@ -1,0 +1,14 @@
+Binary tree is a kind of tree where a parent can have maximum two children.
+We call them left child and right child.
+Diameter: The distance between two farthest nodes in the tree. In the code for diameter, we have created three options.
+Option1: In case of a simple tree where the diameter is equal to the height of left child of root + height of right child of root.
+Option 2: In case where the diameter depend upon the left child of the node. So we pass the left side in the findDiameter function.
+Option 3: In case where the diameter depend upon the right child of the node. So we pass the left side in the findDiameter function.
+
+Traversals: Pre and post order traversal are also applicable in binary trees.
+There is an additional way in which we can traverse through the tree. It is called in order. First the left child will be printed, then the root and then the right child.
+
+Some exercises like finding the largest node, the no of nodes,depth,height,count of leaves are already covered in the generic tree data structure earlier. So we won't be writing them again as it just requires minor modifications.
+
+Balanced Tree: A binary tree can be called balanced binary tree if at each node of the tree, | height of left child - height of right child | <=1.
+( |a| -> modulus)

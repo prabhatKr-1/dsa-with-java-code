@@ -1,0 +1,20 @@
+In the takeInput() function, we are passing the scanner object because it allow us to write all the inputs in a single go and it will figure it out itself.
+
+In previous codes, it is not possible because every time a function containing scanner is run, a new copy of scanner is created which cannot access the data collected by the previous scanner. So we need to have a single scanner object.
+
+There is another way of doing it, i.e. creating the scanner globally, but it we will have to make it static.
+
+In this function, we are using recursion to take input and to print the tree. We are entering a node and then the no of children and then we do the same for the children recursively.
+
+Its all fine but there should be a way so that we enter the root first then all its children then all the children of the next node i.e. level wise entry.We can use queues for this.
+
+We will ask for the root and store it in the queue. Then we will remove the root from the queue and enter the children in the queue. Then we will remove the first child from the queue and link it and then we will ask for its children and so on.
+
+Height of a tree: The no of levels present in the tree. There are other definition too but its okay we can modify our code accordingly.
+
+Depth: Depth of root is zero. Depth of its children is 1 and so on.
+
+Tree Traversals: Traversing through the tree.
+    Level Order: Done in level wise like we did in printLevelWise
+    Pre order: The root is printed first and then the children in left to right order.
+    Post order:The children will be printed first in left to right order and the root will be printed at last.

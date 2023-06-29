@@ -1,0 +1,11 @@
+Stack is an abstract data structure that follows LIFO principle.
+We will be seeing its features and properties and won't be going into the implementation part.
+Last In First Out. All insertion and deletion operations can be done at only one end.
+push() -> insert and element on the top of the stack
+top() -> return the element on the top
+pop() -> removes the element on the top
+size() -> return the size of the stack
+isEmpty() -> boolean which return if the stack is empty or not
+
+Check the time complexities of all the functions created in stackUsingArray, its O(1). Hence very fast
+Some times we will have to use implicit stack, i.e. recursion.

@@ -1,0 +1,86 @@
+We can create objects of a class in other classes as well
+We don't have to import as long as we are working in the same package
+This is how we import: (in case working in other packages)
+    import com.OOPs.Student;
+
+
+It is also non-primitive hence in Student s1= new Student(); s1 stores the address
+Access specifier:
+ Default, public, private and protected.
+When we don't write anything, it is default and can be accessed by classes of the
+same package
+When public, can be accessed from anywhere after importing
+When private, can be accessed only within the class
+When protected, can be accessed by child class and within the package
+
+   When we crated a constructor, the default constructor vanishes, and we are forced
+    to use parameterised constructor. Otherwise, we will have to manually write
+    down the default constructor as done above. Comment it and see the magic
+We can also create default constructors and add some default values a/wish.
+
+
+this keyword is used when variables of same name are present while using
+constructor. There is local variable and data member of class of same name
+hence we use this:  this.name=name;
+here this means the object we are constructing is assigned the local variable name
+
+
+static: used when we want a variable to be created only once and accessed by all
+objects. Objects don't get separate copies of static variable
+Static functions are very similar too. It does not depend on the object. That's why  we have made
+getNoOfStudents() function a static function
+
+
+Dynamic array: Array where the size of the array gets adjusted. When all the
+original positions are occupied, a new array of 2*size is created and all the
+contents of the original array are copied, and we get space for more elements.
+
+
+Super: written when we want to use the functions and data members of parent class.
+
+
+Exception Handing: In java, it is a little different.
+try, throw and catch work the same way as in C++ but these three are not sufficient
+If the exception is getting handled in the function, then good otherwise we have
+to write throws exception_name after the function name.
+There is an inbuilt Exception class which takes care of these things. If we want to
+specify the type of exception (to notify the user), we have to create a subclass
+of Exception.
+#######Chech the fractions class as I am going to implement the exception handling
+there.
+finally keyword: the piece of code that we want to run irrespective of exceptions
+is written here.
+
+
+Final keyword: value one assigned can't be changed
+ syntax final int a;
+A final variable can be initialized only when its created or inside the constructor
+Hence setRollNo() won't work anymore.
+We can also use final on functions and classes to make them final.
+Once a function is made final, it can't be overridden by subclasses.
+Once a class is made final, subclasses can't be inherited from it.
+
+
+Abstract class and functions: We can make classes and functions abstract.
+To make a function abstract, just create a reference in the parent class and use
+the keyword abstract. It basically means the function is incomplete and hence the
+class is incomplete too. So we have to use abstract keyword while creating the
+class too.
+The child class has two options. Either it declares itself as abstract too or it
+can override the function and make itself complete. We don't have to write abstract
+while overriding in the child class.
+
+
+Interface: Interface can be though of as an abstract class where all its functions
+are abstract. We don't have to use abstract keyword while creating the function
+We use the keyword 'extends' when extending from a class, while extending from an
+interface, we use the keyword 'implements'.
+But we still use 'extends' keyword when we want an interface to extend from another
+interface.
+We can't extend from multiple classes but we can implement from multiple interfaces.
+Any class implementing an interface has either to declare itself as abstract or has
+to implement all the functions of the interface.
+We generally don't keep data members in interfaces and when we do,they are constant
+only. Eg: public final static double PI=3.14;
+
+

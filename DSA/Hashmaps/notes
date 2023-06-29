@@ -1,0 +1,26 @@
+Hashmaps are data structures with very less time complexity. Operations like insertion, deletion and search are very fast.
+When a map is implemented using BST, it is called tree map, but in this package we are more focused on hashmap which is implemented using hashtable.
+We use treemap when we want to be things in certain order.
+Tree map generally has complexity of O(log(n)) while hashmap has of O(1).
+It contains two things: key and value. In arrays, we know the index can only be integer and we want to overcome this limitation here. We use generics.
+First we are looking at the inbuilt hashmap and then we will implement it by ourselves.
+All the work is done on key not on value because operations performed on values are not as fast. For eg: map.containsValue() is O(n) while map.containsKey() is O(1).
+
+Hashtable has a bucket array where the data is stored and a hash function.
+The hash function comprised of a hash code and a compression function. The hash code will give us an integer for every input and the compression function will make sure that it is within the desired limit of indices as this integer will be an index of the bucket array .
+In case the key is string, there are multiple way of finding the desired integer. What we preferable do is finding the address and converting that hexadecimal to integer. This work is done by the hash code and then the resulting integer is passed through the compression function.
+
+Collision Handling: Sometimes, it may happen that after passing the key through the compression function, same index is generated. That is a problem and for preventing it we use collision handling steps.
+There are two ways of doing it:
+    i.) Closed hashing
+    ii.)Open addressing
+In closed hashing, both the keys are kept at the same place in the bucket array. This can be made to work if each element in the array is the head of a linked list.
+In open addressing, if the place is vacant, we place the integer there otherwise we find an alternate. We use different kind of Open Addressing techniques like:
+    Linear probing : f(i) = i.
+    Quadratic probing : f(i) = i*i
+    Double hashing : f(i) = i*f'(i), f'() is another hashing function.
+We will use Closed hashing also known as Separate Chaining.
+
+To ensure that the time complexity remains O(1), we have to do rehashing.
+Load factor = no of elements/no of boxes.
+When ever the load factor exceeds 0.7, we double the no of boxes(numBucket), this is called rehashing.

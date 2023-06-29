@@ -1,0 +1,12 @@
+Generics: When we decide the data types while creating the object, we use generics.
+We use the < > after the class name and inside it, we write any variable name. Then
+while creating the object, we can replace that variable with the data type of our
+choice. But primitive data types are not allowed because it requires object of a
+class.
+So we use the Integer at the place of int, Character at the place of char, etc.
+Here, Integer is a class and we create its object to use it. It is obviously non-primitive in nature.
+
+We can use generics in methods too. We have to write <T> before the function's
+return type while declaring the function
+
+Bound generic type --> not coded!!

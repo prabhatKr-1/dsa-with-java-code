@@ -1,0 +1,2 @@
+Multi-threading in java allows us to run multiple tasks simultaneously.
+We can create a thread either by extending the thread class or by implementing the Runnable interface

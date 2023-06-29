@@ -1,0 +1,13 @@
+Remember calculating nth fibonacci number using recursion? They we had to make the same call over and over again, which increased the time complexity to O(2^n). It is called overlapping sub-problem.
+In dynamic programming, we overcome these kind of issues and massively improve the time complexity. In the case of fibonacci, the time complexity improves from O(2^n) to O(n).
+It is achieved as we will not be making overlapping sub-problem calls, rather we will be storing the value somewhere and using it. This is called Memorization.
+
+We can covert Recursion + Dynamic Programming code to iterative code.
+Now let's convert the fibonacci code to a iterative one:
+    Fill the array with the base case(s).
+    Then write the appropriate relation and fill the rest of the array.
+    Return the result.
+In general to perform this task:
+    i) Recursion
+    ii) Memorization: Recursion + storage of overlapping sub-problems
+    iii)Iterative DP: Iteration

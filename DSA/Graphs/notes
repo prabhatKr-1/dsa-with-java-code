@@ -1,0 +1,18 @@
+Graph: It is a collection of vertices and edges. Vertices are the nodes and edges refer to the connection between them.
+Adjacent Vertices: The vertices which are connected by an edge.
+Degree: The no of edges a vertex has is called degree of the vertex.
+Connected Graph: A graph where each vertex has a path to another vertex. These path need not be a direct path.
+Connected Component: A section of the graph which is connected is called a connected component. A graph can have zero of multiple connected component.
+Tree: is a special kind of connected graph where there are no cyclic paths.
+
+Graphs can be implemented in various ways:
+    Edge List: Using arrays to store the vertices and to store the pair of edges. But this has very bad time complexity for even the simplest of operations.
+    Adjacent List: In this method, we create a list of the vertices and the elements of this list contain all the edges connected to it. For eg vertex A is in the list then A will have all the edges connected to it.
+    Adjacency Matrix: This is 2*2 matrix containing info about all the vertices and if an edge is present between them or not. It takes a lot of space but is very fast and easy to implement. So we will be using this one.
+
+Printing: We start from any node, let's say zero. We maintain a 'visited' array where we store whether an vertices is printed or not. When we print a vertices, we add that to the visited array. Then we recursively go to the next vertices.
+This is Depth-First System traversal.
+There is another way i.e. Breadth-First System.
+To implement this, we do similar as we have done in tress. We will not use recursion, we will use queue and put the vertices in it. Then we will deque one element and print all its adjacent vertices, then dequeue another and so on.
+
+MST: Minimum Spanning Tree. A graph can have mutltiple ways so that the graph is connected. The minmum weigh of the connected graph is called MST.

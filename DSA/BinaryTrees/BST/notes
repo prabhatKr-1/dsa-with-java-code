@@ -1,0 +1,9 @@
+Binary Search Tree: These are very fast while searching for a no in the tree.
+The binary search we did in arrays, the array being sorted was pre-requisite. Similarly here, the tree should be sorted. So what the hell is a sorted tree?
+If
+Left Child < Root < Right Child at each node.
+Every on the left of the node(child and children of further nodes) should be strictly smaller than the root(equality not allowed) and similarly everything on the right should be greater or equal to the root.
+
+In the BST class, while performing deletion, when we are deleting node, we are not supposed to delete its children.
+
+Read about AVL trees. It is implemented for assuring that our BST is balanced. A balanced binary search tree has a very good time complexity for operations.

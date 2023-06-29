@@ -1,0 +1,12 @@
+Heap is a complete binary tree. It has a heap order property.
+A complete binary tree is a binary tree where all the levels are completely filled except the last level. The elements are inserted from left to right.
+Removal: The rightmost element from the last level is removed,then the next rightmost element and so on.
+
+We use array/arrayList to store the CBT.
+Heap Property:
+The parent-child relation corresponding to the array indices:
+    i -> 2i+1 , 2i+2 (LHS is parent and RHS are children)
+    i -> (i-1)/2 (LHS is child and RHS is the parent)
+
+Min-Heap: Every node should be smaller than its children.
+Max-Heap: Every node should be bigger than its children.

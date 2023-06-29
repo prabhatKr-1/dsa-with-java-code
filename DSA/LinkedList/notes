@@ -1,0 +1,12 @@
+Linked List: It is a data structure.It consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+It does not stores data in contiguous memory locations like arrays, but instead it stores different elements at different locations and also stores the address of the next node.
+Each node stores the data and the address of the next node hence it points to the next node.
+Head stores the address of the first node of the list, tail refers to the last node of the list.
+
+Creating the nodes, then linking them together and returning the address of the first node.
+
+Java Collections Framework contains the Linked List data structure which we can directly use.
+We will import it first and then make its object. It will be a doubly linked list
+
+
+
